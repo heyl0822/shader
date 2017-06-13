@@ -16,13 +16,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
         
-        $('#shader').load(function(){
-
-        var iframe = $('#shader').contents();
-
-        iframe.find("#myPauseButton").click(function(){
-               alert("test");
-        });
+        var listener = addEventListener('blur', function() {
+	if(document.activeElement === document.getElementById('shader')) {
+		message.innerHTML = 'Clicked';
+         console.log("start");
+	}
+    removeEventListener(listener);
 });
         
     function printMousePos(event) {
