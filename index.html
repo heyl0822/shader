@@ -15,15 +15,12 @@
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var iframepos = $("#shader").position();
-
-$('#shader').contents().find('html').on('click', function (e) { 
-    var x = e.clientX + iframepos.left; 
-    var y = e.clientY + iframepos.top;
-    console.log(x + " " + y);
-})
+        
+        
+        document.getElementById("shader").contentWindow.document.getElementById("myPauseButton").addEventListener("click", printMousePos, false);
         
     function printMousePos(event) {
+        console.log("start");
         console.log( "clientX: " + event.clientX + " - clientY: " + event.clientY);
     }
         console.log("start");
