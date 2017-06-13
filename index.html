@@ -18,16 +18,9 @@
 <body>
   <script src="js/scripts.js"></script>
     <script language="javascript" type="text/javascript" src="jquery-1.8.2.js"></script>
-<script language="javascript" type="text/javascript">
-$(function(){
-    $('a.introVid').click(function(){      
-        $('iframe').attr('src', $('iframe').attr('src'));
-    });
-});
+    <script language="javascript" type="text/javascript">
     function printMousePos(event) {
-  document.body.textContent =
-    "clientX: " + event.clientX +
-    " - clientY: " + event.clientY;
+    consile.log( "clientX: " + event.clientX + " - clientY: " + event.clientY);
 }
 
 document.addEventListener("click", printMousePos);
