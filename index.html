@@ -37,6 +37,15 @@
 	       }
         });
    });
+        $(function(){
+      var widget1 = SC.Widget("soundcloud_widget");
+
+            var listener = addEventListener('blur', function() {
+	       if(document.activeElement === document.getElementById('shader')) {
+                widget1.play();
+               
+	       }     
+    });
                 
 </script>
     <body style="margin:0px;padding:0px;overflow:hidden">
