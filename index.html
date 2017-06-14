@@ -17,21 +17,22 @@
     <script src="http://w.soundcloud.com/player/api.js"></script>
     <script type="text/javascript">
         
-        var listener = addEventListener('blur', function() {
-	       if(document.activeElement === document.getElementById('shader')) {
-            console.log("Clicked");
-               
-	       }
-        });
+//        var listener = addEventListener('blur', function() {
+//	       if(document.activeElement === document.getElementById('shader')) {
+//            console.log("Clicked");
+//               
+//	       }
+//        });
         
         $(document).ready(function() {
             var widget = SC.Widget(document.getElementById('soundcloud_widget'));
             widget.bind(SC.Widget.Events.READY, function() {
                 console.log('Ready...');
             });
+            
         var listener = addEventListener('blur', function() {
 	       if(document.activeElement === document.getElementById('shader')) {
-            widget.toggle();
+                widget.toggle();
                
 	       }
         });
